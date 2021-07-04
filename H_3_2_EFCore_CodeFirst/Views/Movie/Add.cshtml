@@ -1,0 +1,18 @@
+﻿@model MovieViewModel
+
+<label>Ad</label>
+<input asp-for="Name" />
+<label>Yönetmen</label>
+<input asp-for="Director" />
+<label>IMDB</label>
+<input asp-for="IMDB" />
+<label>Yılı</label>
+<input asp-for="ProductionDate" />
+       
+<select asp-items="@(new SelectList(ViewBag.Categories,"Id","Name"))" multiple>
+    <option>Lütfen Kategori seçiniz...</option>
+</select>
+
+@Html.ActionLink("Kategori Giriniz","CategoryAdd","Category")
+
+
